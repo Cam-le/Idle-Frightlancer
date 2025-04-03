@@ -3,7 +3,7 @@
 **A 2D Mobile Tycoon/Idle Game of Spooky Business Management**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) <!-- Replace with your actual license badge -->
-[![Unity Version](https://img.shields.io/badge/Unity-2022.3.x%20LTS-blueviolet)](https://unity.com/releases/editor/archive) <!-- Update with your specific Unity LTS version -->
+[![Unity Version](https://img.shields.io/badge/Unity-6000.0.x%20LTS-blueviolet)](https://unity.com/releases/editor/archive) <!-- Update with your specific Unity LTS version -->
 [![Development Status](https://img.shields.io/badge/Status-In%20Development-brightgreen)](solo-dev-plan.md)
 
 ---
