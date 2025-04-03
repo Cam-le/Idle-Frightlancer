@@ -1,0 +1,21 @@
+{
+    "name": "PettyFrightlancer.Tests.EditMode",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7ef091a885212894b81c6aa200039a31",
+        "GUID:b0f53b221c8c1cb4992479df7dfab689",
+        "GUID:085d0dc80ac90f645a2c356d008dd685",
+        "GUID:208889d202e478a4d9a24de5b50468e1",
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:0acc523941302664db1f4e527237feb3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
