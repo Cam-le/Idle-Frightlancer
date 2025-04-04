@@ -24,11 +24,5 @@ namespace PettyFrightlancer.Core.Events
         void Publish<TEvent>(TEvent gameEvent) where TEvent : IGameEvent;
     }
 
-    /// <summary>
-    /// Base interface for all game events.
-    /// </summary>
-    public interface IGameEvent
-    {
-        // Marker interface for event types
-    }
+
 }

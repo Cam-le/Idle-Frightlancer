@@ -1,4 +1,4 @@
-namespace PettyFrightlancer.Core.Data
+namespace PettyFrightlancer.Common.Enums
 {
     /// <summary>
     /// Types of resources in the game.

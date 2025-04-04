@@ -1,16 +1,17 @@
 namespace PettyFrightlancer.Core.Events
 {
+    using PettyFrightlancer.Common.Enums;
     /// <summary>
     /// Event fired when a resource amount changes.
     /// </summary>
     public class ResourceChangedEvent : IGameEvent
     {
-        public Services.ResourceType ResourceType { get; }
+        public ResourceType ResourceType { get; }
         public float PreviousAmount { get; }
         public float NewAmount { get; }
         public float Delta { get; }
 
-        public ResourceChangedEvent(Services.ResourceType resourceType, float previousAmount, float newAmount)
+        public ResourceChangedEvent(ResourceType resourceType, float previousAmount, float newAmount)
         {
             ResourceType = resourceType;
             PreviousAmount = previousAmount;

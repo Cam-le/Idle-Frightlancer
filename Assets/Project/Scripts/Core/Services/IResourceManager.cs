@@ -1,5 +1,6 @@
 namespace PettyFrightlancer.Core.Services
 {
+    using PettyFrightlancer.Common.Enums;
     /// <summary>
     /// Manages game resources (Soul Essence, Grave Dust, etc.).
     /// </summary>
@@ -34,16 +35,5 @@ namespace PettyFrightlancer.Core.Services
         /// <param name="resourceType">Type of resource.</param>
         /// <returns>Generation rate in units per minute.</returns>
         float GetGenerationRate(ResourceType resourceType);
-    }
-
-    /// <summary>
-    /// Types of resources in the game.
-    /// </summary>
-    public enum ResourceType
-    {
-        SoulEssence,
-        GraveDust,
-        BoneChips,
-        Ectoplasm
     }
 }

@@ -1,6 +1,7 @@
 namespace PettyFrightlancer.Core.Services
 {
     using UnityEngine.UIElements;
+    using PettyFrightlancer.Common.Enums;
 
     /// <summary>
     /// Manages UI screens and navigation.
@@ -33,18 +34,5 @@ namespace PettyFrightlancer.Core.Services
         /// </summary>
         /// <returns>Root visual element.</returns>
         VisualElement GetRoot();
-    }
-
-    /// <summary>
-    /// Types of UI screens in the game.
-    /// </summary>
-    public enum UIScreenType
-    {
-        Main,
-        Lair,
-        Operations,
-        Units,
-        Research,
-        Settings
     }
 }
