@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:engine="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd">
+    <engine:Style src="project://database/Assets/Project/UI/USS/GameScreen.uss" />
+    <engine:VisualElement name="root" class="root">
+        <!-- Header with Resources -->
+        <engine:VisualElement name="header" class="header">
+            <engine:VisualElement name="header-title-bar" class="header-title-bar">
+                <engine:Button name="menu-toggle" class="menu-button">
+                    <engine:VisualElement class="menu-icon-line" />
+                    <engine:VisualElement class="menu-icon-line" />
+                    <engine:VisualElement class="menu-icon-line" />
+                </engine:Button>
+                <engine:Label name="header-title" text="Petty Frightlancer" class="header-title" />
+                <engine:Button name="stats-button" class="icon-button">
+                    <engine:Label text="📊" />
+                </engine:Button>
+            </engine:VisualElement>
+            
+            <engine:VisualElement name="resources-container" class="resources-container">
+                <engine:VisualElement name="resource-soul-essence" class="resource-card soul-essence">
+                    <engine:Label text="Soul Essence" class="resource-name" />
+                    <engine:Label text="2.4K" name="soul-essence-value" class="resource-value" />
+                    <engine:Label text="+24/min" name="soul-essence-rate" class="resource-rate" />
+                </engine:VisualElement>
+                <engine:VisualElement name="resource-grave-dust" class="resource-card grave-dust">
+                    <engine:Label text="Grave Dust" class="resource-name" />
+                    <engine:Label text="965" name="grave-dust-value" class="resource-value" />
+                    <engine:Label text="+12/min" name="grave-dust-rate" class="resource-rate" />
+                </engine:VisualElement>
+                <engine:VisualElement name="resource-bone-chips" class="resource-card bone-chips">
+                    <engine:Label text="Bone Chips" class="resource-name" />
+                    <engine:Label text="532" name="bone-chips-value" class="resource-value" />
+                    <engine:Label text="+8/min" name="bone-chips-rate" class="resource-rate" />
+                </engine:VisualElement>
+                <engine:VisualElement name="resource-ectoplasm" class="resource-card ectoplasm">
+                    <engine:Label text="Ectoplasm" class="resource-name" />
+                    <engine:Label text="128" name="ectoplasm-value" class="resource-value" />
+                    <engine:Label text="+2/min" name="ectoplasm-rate" class="resource-rate" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+
+        <!-- Main Content -->
+        <engine:VisualElement name="main-content" class="main-content">
+            <!-- Lair Screen -->
+            <engine:VisualElement name="lair-screen" class="screen active">
+                <engine:VisualElement name="enthusiasm-meter" class="enthusiasm-meter">
+                    <engine:VisualElement name="enthusiasm-header" class="enthusiasm-header">
+                        <engine:Label text="Undead Enthusiasm" class="enthusiasm-label" />
+                        <engine:Label text="68%" name="enthusiasm-value" class="enthusiasm-value" />
+                    </engine:VisualElement>
+                    <engine:VisualElement name="enthusiasm-bar" class="enthusiasm-bar">
+                        <engine:VisualElement name="enthusiasm-fill" class="enthusiasm-fill" style="width: 68%;" />
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                
+                <engine:VisualElement name="lair-view" class="lair-view">
+                    <engine:VisualElement name="lair-grid" class="lair-grid">
+                        <!-- Example rooms - would be dynamically generated -->
+                        <engine:VisualElement name="room-cell-1" class="room-cell">
+                            <engine:VisualElement class="room">
+                                <engine:VisualElement class="room-header">
+                                    <engine:Label text="Haunted Crypt" class="room-name" />
+                                    <engine:Label text="Lvl 2" class="room-level" />
+                                </engine:VisualElement>
+                                <engine:VisualElement class="room-content">
+                                    <engine:VisualElement class="pixel-crypt" />
+                                </engine:VisualElement>
+                                <engine:Label text="Units: 3/4" class="room-details" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                        
+                        <engine:VisualElement name="room-cell-2" class="room-cell">
+                            <engine:VisualElement class="room">
+                                <engine:VisualElement class="room-header">
+                                    <engine:Label text="Necro Lab" class="room-name" />
+                                    <engine:Label text="Lvl 1" class="room-level" />
+                                </engine:VisualElement>
+                                <engine:VisualElement class="room-content">
+                                    <engine:VisualElement class="pixel-lab" />
+                                </engine:VisualElement>
+                                <engine:Label text="Units: 1/2" class="room-details" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                        
+                        <engine:VisualElement name="room-cell-3" class="room-cell empty">
+                            <engine:Label text="+" class="empty-room-plus" />
+                        </engine:VisualElement>
+                        
+                        <engine:VisualElement name="room-cell-4" class="room-cell">
+                            <engine:VisualElement class="room">
+                                <engine:VisualElement class="room-header">
+                                    <engine:Label text="Dark Altar" class="room-name" />
+                                    <engine:Label text="Lvl 2" class="room-level" />
+                                </engine:VisualElement>
+                                <engine:VisualElement class="room-content">
+                                    <engine:VisualElement class="pixel-altar" />
+                                </engine:VisualElement>
+                                <engine:Label text="Units: 2/3" class="room-details" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                        
+                        <!-- More empty room cells -->
+                        <engine:VisualElement name="room-cell-5" class="room-cell empty">
+                            <engine:Label text="+" class="empty-room-plus" />
+                        </engine:VisualElement>
+                        <engine:VisualElement name="room-cell-6" class="room-cell empty">
+                            <engine:Label text="+" class="empty-room-plus" />
+                        </engine:VisualElement>
+                        <engine:VisualElement name="room-cell-7" class="room-cell empty">
+                            <engine:Label text="+" class="empty-room-plus" />
+                        </engine:VisualElement>
+                        <engine:VisualElement name="room-cell-8" class="room-cell empty">
+                            <engine:Label text="+" class="empty-room-plus" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+            </engine:VisualElement>
+            
+            <!-- Other screens (Operations, Units, Research) would be added here -->
+        </engine:VisualElement>
+
+        <!-- Navigation Footer -->
+        <engine:VisualElement name="footer" class="footer">
+            <engine:Button name="lair-button" class="nav-button active">
+                <engine:Label text="🏰" class="nav-icon" />
+                <engine:Label text="Lair" class="nav-label" />
+            </engine:Button>
+            <engine:Button name="operations-button" class="nav-button">
+                <engine:Label text="👻" class="nav-icon" />
+                <engine:Label text="Hauntings" class="nav-label" />
+            </engine:Button>
+            <engine:Button name="units-button" class="nav-button">
+                <engine:Label text="💀" class="nav-icon" />
+                <engine:Label text="Minions" class="nav-label" />
+            </engine:Button>
+            <engine:Button name="research-button" class="nav-button">
+                <engine:Label text="📚" class="nav-icon" />
+                <engine:Label text="Research" class="nav-label" />
+            </engine:Button>
+        </engine:VisualElement>
+        
+        <!-- Side Menu (initially hidden) -->
+        <engine:VisualElement name="side-menu" class="side-menu">
+            <engine:VisualElement name="side-menu-header" class="side-menu-header">
+                <engine:Button name="close-menu" class="close-button">
+                    <engine:Label text="×" />
+                </engine:Button>
+                <engine:Label text="Menu" class="side-menu-title" />
+            </engine:VisualElement>
+            <engine:VisualElement name="menu-items" class="menu-items">
+                <engine:Button name="settings-menu-item" class="menu-item">
+                    <engine:Label text="⚙️" class="menu-icon" />
+                    <engine:Label text="Settings" />
+                </engine:Button>
+                <engine:Button name="stats-menu-item" class="menu-item">
+                    <engine:Label text="📈" class="menu-icon" />
+                    <engine:Label text="Statistics" />
+                </engine:Button>
+                <engine:Button name="achievements-menu-item" class="menu-item">
+                    <engine:Label text="🏆" class="menu-icon" />
+                    <engine:Label text="Achievements" />
+                </engine:Button>
+                <engine:Button name="help-menu-item" class="menu-item">
+                    <engine:Label text="ℹ️" class="menu-icon" />
+                    <engine:Label text="Help" />
+                </engine:Button>
+                <engine:Button name="info-menu-item" class="menu-item">
+                    <engine:Label text="🎮" class="menu-icon" />
+                    <engine:Label text="Game Info" />
+                </engine:Button>
+            </engine:VisualElement>
+        </engine:VisualElement>
+        
+        <!-- Toast notifications -->
+        <engine:VisualElement name="toast" class="toast">
+            <engine:Label name="toast-message" text="Operation completed successfully!" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

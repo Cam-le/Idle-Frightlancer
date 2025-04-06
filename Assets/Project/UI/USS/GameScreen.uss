@@ -1,0 +1,394 @@
+/* Global Variables */
+:root {
+    /* Color Palette - Spooky Theme */
+    --color-background: #1a0f2e;
+    --color-background-light: #2c1b45;
+    --color-primary: #7b38c8;
+    --color-primary-dark: #5a2591;
+    --color-secondary: #50c878; /* Soul Essence green */
+    --color-tertiary: #c83864; /* Bone Chips red */
+    --color-quaternary: #38a2c8; /* Ectoplasm blue */
+    --color-accent: #c8b638; /* Grave Dust yellow */
+    --color-text: #f0e6ff;
+    --color-text-dim: #a494c2;
+    --color-success: #50c878;
+    --color-warning: #c8b638;
+    --color-danger: #c83838;
+}
+
+/* Base Layout */
+.root {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-size: 14px;
+}
+
+/* Header Section */
+.header {
+    background-color: var(--color-background-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+}
+
+.header-title-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.header-title {
+    -unity-font-style: bold;
+    font-size: 18px;
+}
+
+.menu-button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.menu-icon-line {
+    height: 3px;
+    background-color: var(--color-text);
+    border-radius: 3px;
+    width: 100%;
+}
+
+.icon-button {
+    background-color: transparent;
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+}
+
+.resources-container {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.resource-card {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    margin: 0 2px;
+    padding: 5px;
+    align-items: center;
+}
+
+.soul-essence {
+    border-left-width: 3px;
+    border-left-color: var(--color-secondary);
+}
+
+.grave-dust {
+    border-left-width: 3px;
+    border-left-color: var(--color-accent);
+}
+
+.bone-chips {
+    border-left-width: 3px;
+    border-left-color: var(--color-tertiary);
+}
+
+.ectoplasm {
+    border-left-width: 3px;
+    border-left-color: var(--color-quaternary);
+}
+
+.resource-name {
+    font-size: 10px;
+    color: var(--color-text-dim);
+}
+
+.resource-value {
+    -unity-font-style: bold;
+    font-size: 16px;
+}
+
+.resource-rate {
+    font-size: 10px;
+    color: var(--color-text-dim);
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+/* Screens */
+.screen {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* Enthusiasm Meter */
+.enthusiasm-meter {
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.enthusiasm-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.enthusiasm-label {
+    font-size: 12px;
+    color: var(--color-text-dim);
+}
+
+.enthusiasm-value {
+    font-size: 12px;
+    -unity-font-style: bold;
+}
+
+.enthusiasm-bar {
+    height: 6px;
+    background-color: var(--color-background);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.enthusiasm-fill {
+    height: 100%;
+    background-color: var(--color-secondary);
+}
+
+/* Lair View */
+.lair-view {
+    flex-grow: 1;
+    overflow: scroll;
+    padding: 10px;
+}
+
+.lair-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.room-cell {
+    width: 33.33%;
+    aspect-ratio: 1;
+    padding: 5px;
+}
+
+.room-cell .room {
+    background-color: var(--color-background-light);
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.room-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.room-name {
+    -unity-font-style: bold;
+    font-size: 13px;
+}
+
+.room-level {
+    font-size: 11px;
+    padding: 2px 6px;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+}
+
+.room-content {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.room-details {
+    align-self: flex-end;
+    font-size: 11px;
+    color: var(--color-text-dim);
+}
+
+.empty {
+    border-width: 2px;
+    border-color: var(--color-text-dim);
+    border-radius: 4px;
+    border-style: dashed;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-room-plus {
+    font-size: 24px;
+    color: var(--color-text-dim);
+}
+
+/* Footer Navigation */
+.footer {
+    background-color: var(--color-background-light);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+    flex-direction: row;
+    justify-content: space-around;
+    height: 80px;
+}
+
+.nav-button {
+    flex-grow: 1;
+    background-color: transparent;
+    border-width: 0;
+    border-top-width: 3px;
+    border-color: transparent;
+    border-radius: 0;
+    padding: 10px 0;
+    align-items: center;
+    color: var(--color-text-dim);
+}
+
+.nav-button.active {
+    color: var(--color-text);
+    border-top-color: var(--color-primary);
+    background-color: rgba(123, 56, 200, 0.1);
+}
+
+.nav-icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.nav-label {
+    font-size: 12px;
+}
+
+/* Side Menu */
+.side-menu {
+    position: absolute;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background-color: var(--color-background-light);
+    transition-property: left;
+    transition-duration: 0.3s;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.side-menu-header {
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 15px;
+    border-bottom-width: 1px;
+    border-color: var(--color-text-dim);
+}
+
+.side-menu-title {
+    flex-grow: 1;
+    -unity-font-style: bold;
+}
+
+.close-button {
+    background-color: transparent;
+    border-width: 0;
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-items {
+    padding: 15px;
+}
+
+.menu-item {
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    border-width: 0;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 5px;
+}
+
+.menu-item:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.menu-icon {
+    width: 24px;
+    margin-right: 15px;
+}
+
+/* Toast Notification */
+.toast {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    translate: -50% 0;
+    background-color: var(--color-primary);
+    padding: 12px 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+.toast.visible {
+    opacity: 1;
+}
+
+/* Pixel Art Elements */
+.pixel-crypt, .pixel-altar, .pixel-lab, .pixel-ghost, .pixel-skeleton, .pixel-zombie {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-background-light);
+}
+
+.pixel-crypt {
+    background-image: url('project://database/Assets/_Project/Art/Sprites/crypt.png');
+}
+
+.pixel-altar {
+    background-image: url('project://database/Assets/_Project/Art/Sprites/altar.png');
+}
+
+.pixel-lab {
+    background-image: url('project://database/Assets/_Project/Art/Sprites/lab.png');
+}
+
+/* For other screens that will be implemented later */
+#operations-screen, #units-screen, #research-screen {
+    padding: 15px;
+}
